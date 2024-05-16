@@ -1,4 +1,4 @@
-![image](https://github.com/JoaoBMC/Relogio-ESP32/assets/64325336/55e5d3cf-e2a8-49a9-869b-da81bdc58999)
+
 # Projeto Relógio-ESP32
 - Este é o #2 projeto de uma série de estudos de programação [PRJT-8].
 
