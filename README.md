@@ -1,3 +1,4 @@
+![image](https://github.com/JoaoBMC/Relogio-ESP32/assets/64325336/55e5d3cf-e2a8-49a9-869b-da81bdc58999)
 # Projeto Relógio-ESP32
 - Este é o #2 projeto de uma série de estudos de programação [PRJT-8].
 
@@ -91,7 +92,8 @@ Para configurar o alarme:
 
 ## Esquemático
 
-![Esquemático](https://prod-files-secure.s3.us-west-2.amazonaws.com/ad2fbe92-5fb4-42ed-9a29-fc2f4649b418/a88ffb2c-e400-4015-b07d-e39b4dcdf6cf/Untitled.png)
+![Esquemático](![image](https://github.com/JoaoBMC/Relogio-ESP32/assets/64325336/5ec7a7ca-b0ac-469e-948a-c529919b8e36)
+)
 
 | Componente | GPIO |
 | --- | --- |
