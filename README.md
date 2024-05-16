@@ -92,8 +92,8 @@ Para configurar o alarme:
 
 ## Esquemático
 
-![Esquemático](![image](https://github.com/JoaoBMC/Relogio-ESP32/assets/64325336/5ec7a7ca-b0ac-469e-948a-c529919b8e36)
-)
+![Esquemático]![image](https://github.com/JoaoBMC/Relogio-ESP32/assets/64325336/c94bc414-ce17-4b3e-a2a9-8bb9ab71d72d)
+
 
 | Componente | GPIO |
 | --- | --- |
