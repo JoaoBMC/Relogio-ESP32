@@ -5,6 +5,8 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
+#include "encoderLib/encoder.h"
+
 #define SCL 22
 #define SDA 21
 
@@ -20,17 +22,16 @@
 #define ENCD_DT 19
 #define ENCD_SW 23
 
-uint8_t encd_clk_status = 0;
-uint8_t encd_orientation = 0;
+uint timer = 0;
 
 void setup()
 {
-  pinMode(INPUT, ENCD_CLK);
-  pinMode(INPUT, ENCD_DT);
-  pinMode(INPUT, ENCD_SW);
-
-  // attachInterrupt(digitalPinToInterrupt(ENCD_CLK), ISR_encoder, RISING);
   Serial.begin(115200);
+  Encoder enc(ENCD_CLK, ENCD_DT, ENCD_SW);
+}
+
+void encoder_loop()
+{
 }
 
 void loop()
