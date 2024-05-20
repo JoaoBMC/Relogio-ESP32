@@ -26,17 +26,17 @@ long Encoder::getEnValue()
 }
 bool Encoder::getSwichValue()
 {
-    if (millis() - runTimer >= button_target)
-    {
-
-        runTimer = millis();
-        return digitalRead(sw_pin);
-    }
+    return digitalRead(sw_pin);
+}
+void Encoder::begin()
+{
+    pinMode(clk_pin, INPUT_PULLDOWN);
+    pinMode(dt_pin, INPUT);
+    pinMode(sw_pin, INPUT_PULLUP);
 }
 void Encoder::loop()
 {
     encd_clk_status = digitalRead(clk_pin);
-
     if (encd_clk_aux != encd_clk_status && encd_clk_status == HIGH)
     {
         if (digitalRead(dt_pin) == HIGH)
@@ -45,9 +45,6 @@ void Encoder::loop()
         }
         else
             value++;
-
-        Serial.print("TEST: ");
-        Serial.println(value);
     }
     encd_clk_aux = digitalRead(clk_pin);
 }

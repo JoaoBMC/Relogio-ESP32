@@ -15,5 +15,6 @@ public:
     long getEnValue();
     bool getSwichValue();
     void loop();
+    void begin();
     ~Encoder();
 };

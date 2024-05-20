@@ -23,11 +23,16 @@
 #define ENCD_SW 23
 
 uint timer = 0;
+bool btt_status = 0;
+bool btt_status_long_press = 0;
+int btt_counter = 0;
+long valueSW = 0;
 
+Encoder enc(ENCD_CLK, ENCD_DT, ENCD_SW);
 void setup()
 {
   Serial.begin(115200);
-  Encoder enc(ENCD_CLK, ENCD_DT, ENCD_SW);
+  enc.begin();
 }
 
 void encoder_loop()
@@ -36,4 +41,32 @@ void encoder_loop()
 
 void loop()
 {
+  enc.loop();
+  btt_status = enc.getSwichValue();
+  // Serial.println(btt_status);
+
+  if (enc.getEnValue() != valueSW)
+  {
+    valueSW = enc.getEnValue();
+    Serial.println(valueSW);
+  }
+  if (millis() - timer >= 250 && !btt_status)
+  {
+    btt_counter++;
+    timer = millis();
+    Serial.println("btt press");
+    if (btt_counter >= 4)
+    {
+      Serial.println("long press");
+      btt_status_long_press = 1;
+    }
+    else
+      btt_status_long_press = 0;
+  }
+  else
+  {
+    btt_counter = 0;
+  }
+
+  delay(10); // this speeds up the simulation
 }
